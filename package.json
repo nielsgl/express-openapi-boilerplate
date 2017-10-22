@@ -1,6 +1,6 @@
 {
 	"name": "express-openapi-boilerplate",
-	"version": "0.0.0",
+	"version": "0.0.1",
 	"description": "Serverless boilerplate",
 	"author": "Niels van Galen Last <nvangalenlast@gmail.com> (https://nielsgl.com)",
 	"license": "MIT",
@@ -30,8 +30,11 @@
 	"scripts": {
 		"clean": "rm -rf node_modules",
 		"lint": "exit 0",
-		"start": "DEBUG=app:* node ./bin/www",
-		"test": "exit 0"
+		"start": "DEBUG=app:* node app.js",
+		"start:www": "DEBUG=app:* node ./bin/www",
+		"start:openapi": "DEBUG=app:* swagger project start",
+		"start:www": "DEBUG=app:* node ./bin/www",
+		"test": "swagger project test"
 	},
 	"jest-junit": {
 		"output": "./coverage/junit.xml"
@@ -48,13 +51,12 @@
 		"supertest": "^3.0.0"
 	},
 	"dependencies": {
-		"body-parser": "~1.18.2",
-		"cookie-parser": "~1.4.3",
-		"debug": "~2.6.9",
-		"ejs": "~2.5.7",
-		"express": "~4.15.5",
-		"morgan": "~1.9.0",
-		"serve-favicon": "~2.4.5",
+		"body-parser": "^1.18.2",
+		"debug": "^3.1.0",
+		"ejs": "^2.5.7",
+		"express": "^4.12.3",
+		"morgan": "^1.9.0",
+		"serve-favicon": "^2.4.5",
 		"swagger-express-mw": "^0.7.0"
 	}
 }
