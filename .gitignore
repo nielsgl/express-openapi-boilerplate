@@ -32,9 +32,13 @@ bower_components
 # Compiled binary addons (http://nodejs.org/api/addons.html)
 build/Release
 
-# Dependency directories
-node_modules/
+# Dependency directory
+# https://docs.npmjs.com/cli/shrinkwrap#caveats
+node_modules
 jspm_packages/
+
+# Debug log from npm
+npm-debug.log
 
 # Typescript v1 declaration files
 typings/
@@ -56,4 +60,3 @@ typings/
 
 # dotenv environment variables file
 .env
-
