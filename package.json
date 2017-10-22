@@ -32,7 +32,6 @@
 		"lint": "exit 0",
 		"start": "DEBUG=app:* node ./bin/www",
 		"test": "exit 0"
-
 	},
 	"jest-junit": {
 		"output": "./coverage/junit.xml"
@@ -44,7 +43,9 @@
 		}
 	},
 	"devDependencies": {
-		"husky": "^0.15.0-beta.10"
+		"husky": "^0.15.0-beta.10",
+		"should": "^13.1.2",
+		"supertest": "^3.0.0"
 	},
 	"dependencies": {
 		"body-parser": "~1.18.2",
@@ -53,6 +54,7 @@
 		"ejs": "~2.5.7",
 		"express": "~4.15.5",
 		"morgan": "~1.9.0",
-		"serve-favicon": "~2.4.5"
+		"serve-favicon": "~2.4.5",
+		"swagger-express-mw": "^0.7.0"
 	}
 }
