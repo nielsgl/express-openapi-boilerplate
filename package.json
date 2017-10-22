@@ -29,7 +29,10 @@
 	"main": "app.js",
 	"scripts": {
 		"clean": "rm -rf node_modules",
-		"start": "DEBUG=app:* node ./bin/www"
+		"lint": "exit 0",
+		"start": "DEBUG=app:* node ./bin/www",
+		"test": "exit 0"
+
 	},
 	"jest-junit": {
 		"output": "./coverage/junit.xml"
