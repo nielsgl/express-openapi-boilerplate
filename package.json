@@ -29,12 +29,14 @@
 	"main": "app.js",
 	"scripts": {
 		"clean": "rm -rf node_modules",
+		"edit": "swagger project edit",
 		"lint": "exit 0",
 		"start": "DEBUG=app:* node app.js",
 		"start:www": "DEBUG=app:* node ./bin/www",
 		"start:openapi": "DEBUG=app:* swagger project start",
 		"start:www": "DEBUG=app:* node ./bin/www",
-		"test": "swagger project test"
+		"test": "swagger project test",
+		"validate": "swagger project verify"
 	},
 	"jest-junit": {
 		"output": "./coverage/junit.xml"
