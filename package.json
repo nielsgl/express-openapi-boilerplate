@@ -1,0 +1,55 @@
+{
+	"name": "express-openapi-boilerplate",
+	"version": "0.0.0",
+	"description": "Serverless boilerplate",
+	"author": "Niels van Galen Last <nvangalenlast@gmail.com> (https://nielsgl.com)",
+	"license": "MIT",
+	"homepage": "https://github.com/nielsgl/express-openapi-boilerplate#readme",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/nielsgl/express-openapi-boilerplate.git"
+	},
+	"bugs": {
+		"url": "https://github.com/nielsgl/express-openapi-boilerplate/issues"
+	},
+	"keywords": [
+		"express",
+		"boilerplate",
+		"starter",
+		"starter kit",
+		"openapi",
+		"swagger",
+		"docker",
+		"api"
+	],
+	"engines": {
+		"node": ">=8.5.0",
+		"npm": "~5.5.1"
+	},
+	"main": "app.js",
+	"scripts": {
+		"clean": "rm -rf node_modules",
+		"start": "DEBUG=app:* node ./bin/www"
+	},
+	"jest-junit": {
+		"output": "./coverage/junit.xml"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "",
+			"pre-push": "yarn lint"
+		}
+	},
+	"devDependencies": {
+		"husky": "^0.15.0-beta.10"
+	},
+	"dependencies": {
+		"body-parser": "~1.18.2",
+		"cookie-parser": "~1.4.3",
+		"debug": "~2.6.9",
+		"ejs": "~2.5.7",
+		"express": "~4.15.5",
+		"morgan": "~1.9.0",
+		"serve-favicon": "~2.4.5"
+	}
+}
