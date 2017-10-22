@@ -1,11 +1,11 @@
 'use strict';
 
-var SwaggerExpress = require('swagger-express-mw');
 const debug = require('debug')('app:root');
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
+const SwaggerExpress = require('swagger-express-mw');
 
 var express = require('express');
 var app = express();
@@ -17,10 +17,10 @@ var config = {
 
 // From Express
 // uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
-// app.use(logger('dev'));
-// app.use(bodyParser.json());
-// app.use(bodyParser.urlencoded({ extended: false }));
+// app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+app.use(logger('dev'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 //
 // // catch 404 and forward to error handler
 // app.use(function(req, res, next) {
@@ -39,8 +39,7 @@ var config = {
 //   res.status(err.status || 500);
 //   res.json({status: err.status, error: 'err', message: 'message'});
 // });
-//
-// module.exports = app;
+
 
 SwaggerExpress.create(config, function(err, swaggerExpress) {
 	if (err) { throw err; }
@@ -55,3 +54,6 @@ SwaggerExpress.create(config, function(err, swaggerExpress) {
 		debug('try this:\ncurl http://127.0.0.1:' + port + '/hello?name=Niels');
 	}
 });
+
+
+module.exports = app;
